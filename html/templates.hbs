@@ -1,0 +1,31 @@
+<script type='text/x-handlebars-template' id='main_structure'>
+    <div class='container-fluid'>
+        <div class='row'>
+            <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
+                <h1 class="fs-section-title">GHG Geospatial Component</h1>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
+                <div role='tabpanel' id="ghg-spatial-tab-panel">
+                    <ul class='nav nav-tabs' role='tablist'>
+                        <li role='presentation' class='active'>
+                            <a href='#ghg_spatial_download_panel' aria-controls='ghg_spatial_download' role='tab' data-toggle='tab'>
+                                {{{spatial_download}}}
+                            </a>
+                        </li>
+                        <li role='presentation'>
+                            <a href='#ghg_spatial_browse_panel' aria-controls='ghg_spatial_browse' role='tab' data-toggle='tab'>
+                                {{{spatial_browse}}}
+                            </a>
+                        </li>
+                    </ul>
+                    <div class='tab-content'>
+                        <div role='tabpanel' class='tab-pane active' id='ghg_spatial_download_panel'></div>
+                        <div role='tabpanel' class='tab-pane' id='ghg_spatial_browse_panel'></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
