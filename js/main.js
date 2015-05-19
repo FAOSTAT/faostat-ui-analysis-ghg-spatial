@@ -79,7 +79,7 @@ define([
             var config = $.extend(true, {}, m.module_config);
             config.placeholder = id;
             config.placeholder_id = id;
-            config.lang = _this.lang;
+            config.lang = _this.o.lang;
             var module = new MODULE(config);
             module.init(config);
             _this.o.cached_modules[moduleCode] = module;
