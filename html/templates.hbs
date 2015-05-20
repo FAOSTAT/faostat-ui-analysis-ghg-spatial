@@ -1,28 +1,36 @@
 <script type='text/x-handlebars-template' id='main_structure'>
     <div class='container-fluid'>
         <div class='row'>
-            <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
-                <h1 class="fs-section-title">GHG Geospatial Component</h1>
+            <div class='col-xs-12 col-sm-8 col-md-8 col-lg-8'>
+                <h1>
+                    {{module_label}}
+                </h1>
+            </div>
+            <div class='col-xs-12 col-sm-4 col-md-4 col-lg-4'>
+                <h3 class='instructions pull-right' id='user_guide_top'>
+                    <i class="fa fa-file-pdf-o"></i>{{user_guide}}
+                </h3>
             </div>
         </div>
+        <br>
         <div class='row'>
             <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
                 <div role='tabpanel' id="ghg-spatial-tab-panel">
                     <ul class='nav nav-tabs' role='tablist'>
                         <li role='presentation' class='active'>
-                            <a href='#ghg_spatial_download_panel' aria-controls='ghg_spatial_download' role='tab' data-toggle='tab'>
-                                {{{spatial_download}}}
-                            </a>
-                        </li>
-                        <li role='presentation'>
                             <a href='#ghg_spatial_browse_panel' aria-controls='ghg_spatial_browse' role='tab' data-toggle='tab'>
                                 {{{spatial_browse}}}
                             </a>
                         </li>
+                        <li role='presentation'>
+                            <a href='#ghg_spatial_download_panel' aria-controls='ghg_spatial_download' role='tab' data-toggle='tab'>
+                                {{{spatial_download}}}
+                            </a>
+                        </li>
                     </ul>
                     <div class='tab-content'>
-                        <div role='tabpanel' class='tab-pane active' id='ghg_spatial_download_panel'></div>
-                        <div role='tabpanel' class='tab-pane' id='ghg_spatial_browse_panel'></div>
+                        <div role='tabpanel' class='tab-pane active' id='ghg_spatial_browse_panel'></div>
+                        <div role='tabpanel' class='tab-pane' id='ghg_spatial_download_panel'></div>
                     </div>
                 </div>
             </div>

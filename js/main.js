@@ -46,8 +46,10 @@ define([
         var source = $(templates).filter('#main_structure').html();
         var template = Handlebars.compile(source);
         var dynamic_data = {
+            module_label: i18n.module_label,
             spatial_download : i18n.spatial_download,
-            spatial_browse: i18n.spatial_browse
+            spatial_browse: i18n.spatial_browse,
+            user_guide: i18n.user_guide
         };
         var html = template(dynamic_data);
         $('#' + this.o.placeholder).html(html);
@@ -62,7 +64,7 @@ define([
         });
 
         // Init
-        this.init_module("ghg_spatial_download", "ghg_spatial_download_panel", true);
+        this.init_module("ghg_spatial_download", "ghg_spatial_download_panel", false);
         this.init_module("ghg_spatial_browse", "ghg_spatial_browse_panel", false);
     };
 
